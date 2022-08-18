@@ -204,6 +204,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Services_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Services/auth-http-interceptor.service */ "wbx2");
 /* harmony import */ var _Services_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/guard.service */ "kIOZ");
 /* harmony import */ var _ads_prueba_prueba_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ads/prueba/prueba.component */ "u0j6");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
 
 
 
@@ -223,8 +225,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         {
             provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HTTP_INTERCEPTORS"],
             useClass: _Services_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_8__["AuthHttpInterceptorService"],
-            multi: true
-        }], imports: [[
+            multi: true,
+        }, { provide: _angular_common__WEBPACK_IMPORTED_MODULE_11__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_11__["HashLocationStrategy"] }], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
@@ -260,8 +262,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     {
                         provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HTTP_INTERCEPTORS"],
                         useClass: _Services_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_8__["AuthHttpInterceptorService"],
-                        multi: true
-                    }],
+                        multi: true,
+                    }, { provide: _angular_common__WEBPACK_IMPORTED_MODULE_11__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_11__["HashLocationStrategy"] }],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
             }]
     }], null, null); })();
