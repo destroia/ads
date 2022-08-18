@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    urlServices: "https://localhost:44368/api/"
+    urlServices: "https://siac-back.conveyor.cloud/api/" //"https://localhost:44368/api/"
 };
 /*
  * For easier debugging in development mode, you can import the following file
