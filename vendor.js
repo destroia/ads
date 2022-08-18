@@ -9435,6 +9435,209 @@ class MapToSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_0__["Subscrib
 
 /***/ }),
 
+/***/ "Cvm2":
+/*!***********************************************************************!*\
+  !*** ./node_modules/ng2-adsense/__ivy_ngcc__/fesm2015/ng2-adsense.js ***!
+  \***********************************************************************/
+/*! exports provided: ADSENSE_TOKEN, AdsenseComponent, AdsenseModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADSENSE_TOKEN", function() { return ADSENSE_TOKEN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdsenseComponent", function() { return AdsenseComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdsenseModule", function() { return AdsenseModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+
+
+const _c0 = ["ins"];
+const ADSENSE_TOKEN = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('AdsenseConfig');
+
+class AdsenseComponent {
+    constructor(config, 
+    // tslint:disable-next-line:no-any
+    platform) {
+        this.config = config;
+        this.platform = platform;
+        /** can be manually set if you need all ads on a page to have same id page-xxx */
+        this.adRegion = 'page-' + Math.floor(Math.random() * 10000) + 1;
+        /**
+         * classes applied to the ins element
+         */
+        this.className = '';
+    }
+    ngOnInit() {
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
+        const config = this.config;
+        this.adClient = (_a = this.adClient) !== null && _a !== void 0 ? _a : config.adClient;
+        this.adSlot = (_b = this.adSlot) !== null && _b !== void 0 ? _b : config.adSlot;
+        this.adFormat = (_d = (_c = this.adFormat) !== null && _c !== void 0 ? _c : config.adFormat) !== null && _d !== void 0 ? _d : 'auto';
+        this.display = (_f = (_e = this.display) !== null && _e !== void 0 ? _e : config.display) !== null && _f !== void 0 ? _f : 'block';
+        this.width = (_g = this.width) !== null && _g !== void 0 ? _g : config.width;
+        this.height = (_h = this.height) !== null && _h !== void 0 ? _h : config.height;
+        this.layout = (_j = this.layout) !== null && _j !== void 0 ? _j : config.layout;
+        this.layoutKey = (_k = this.layoutKey) !== null && _k !== void 0 ? _k : config.layoutKey;
+        this.pageLevelAds = (_l = this.pageLevelAds) !== null && _l !== void 0 ? _l : config.pageLevelAds;
+        this.adtest = (_m = this.adtest) !== null && _m !== void 0 ? _m : config.adtest;
+        this.fullWidthResponsive = (_o = this.fullWidthResponsive) !== null && _o !== void 0 ? _o : config.fullWidthResponsive;
+    }
+    ngOnDestroy() {
+        const iframe = this.ins.nativeElement.querySelector('iframe');
+        if (iframe && iframe.contentWindow) {
+            iframe.src = 'about:blank';
+            iframe.remove();
+        }
+    }
+    ngAfterViewInit() {
+        if (Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["isPlatformBrowser"])(this.platform)) {
+            this.push();
+        }
+    }
+    push() {
+        const p = {};
+        if (this.pageLevelAds) {
+            p.google_ad_client = this.adClient;
+            p.enable_page_level_ads = true;
+        }
+        if (window) {
+            try {
+                // tslint:disable-next-line:no-any
+                (window.adsbygoogle = window.adsbygoogle || []).push(p);
+            }
+            catch (_a) {
+                // pass
+            }
+        }
+    }
+}
+AdsenseComponent.ɵfac = function AdsenseComponent_Factory(t) { return new (t || AdsenseComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ADSENSE_TOKEN), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"])); };
+AdsenseComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdsenseComponent, selectors: [["ng2-adsense"], ["ng-adsense"]], viewQuery: function AdsenseComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstaticViewQuery"](_c0, true, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.ins = _t.first);
+    } }, inputs: { adRegion: "adRegion", className: "className", adClient: "adClient", adSlot: "adSlot", adFormat: "adFormat", display: "display", width: "width", height: "height", layout: "layout", layoutKey: "layoutKey", pageLevelAds: "pageLevelAds", adtest: "adtest", fullWidthResponsive: "fullWidthResponsive" }, decls: 2, vars: 17, consts: [["ins", ""]], template: function AdsenseComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "ins", null, 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMapInterpolate1"]("adsbygoogle ", ctx.className, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("display", ctx.display)("width", ctx.width, "px")("height", ctx.height, "px");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("data-ad-client", ctx.adClient)("data-ad-slot", ctx.adSlot)("data-ad-format", ctx.adFormat)("data-ad-region", ctx.adRegion)("data-layout", ctx.layout)("data-adtest", ctx.adtest)("data-layout-key", ctx.layoutKey)("data-full-width-responsive", ctx.fullWidthResponsive);
+    } }, encapsulation: 2, changeDetection: 0 });
+AdsenseComponent.ctorParameters = () => [
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [ADSENSE_TOKEN,] }] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"], args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"],] }] }
+];
+AdsenseComponent.propDecorators = {
+    adClient: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    adSlot: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    adFormat: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    adRegion: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    display: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    width: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    height: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    layout: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    layoutKey: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    pageLevelAds: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    adtest: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    fullWidthResponsive: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    className: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+    ins: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: ['ins', { read: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], static: true },] }]
+};
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AdsenseComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'ng2-adsense,ng-adsense',
+                template: `
+    <ins
+      #ins
+      class="adsbygoogle {{ className }}"
+      [style.display]="display"
+      [style.width.px]="width"
+      [style.height.px]="height"
+      [attr.data-ad-client]="adClient"
+      [attr.data-ad-slot]="adSlot"
+      [attr.data-ad-format]="adFormat"
+      [attr.data-ad-region]="adRegion"
+      [attr.data-layout]="layout"
+      [attr.data-adtest]="adtest"
+      [attr.data-layout-key]="layoutKey"
+      [attr.data-full-width-responsive]="fullWidthResponsive"
+    >
+    </ins>
+  `,
+                changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectionStrategy"].OnPush
+            }]
+    }], function () { return [{ type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [ADSENSE_TOKEN]
+            }] }, { type: undefined, decorators: [{
+                type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+                args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]
+            }] }]; }, { adRegion: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], className: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], adClient: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], adSlot: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], adFormat: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], display: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], width: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], height: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], layout: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], layoutKey: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], pageLevelAds: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], adtest: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], fullWidthResponsive: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], ins: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+            args: ['ins', { read: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], static: true }]
+        }] }); })();
+
+class AdsenseModule {
+    static forRoot(config = {}) {
+        return {
+            ngModule: AdsenseModule,
+            providers: [{ provide: ADSENSE_TOKEN, useValue: config }],
+        };
+    }
+}
+AdsenseModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AdsenseModule });
+AdsenseModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AdsenseModule_Factory(t) { return new (t || AdsenseModule)(); }, imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdsenseModule, { declarations: function () { return [AdsenseComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]; }, exports: function () { return [AdsenseComponent]; } }); })();
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AdsenseModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+                imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+                exports: [AdsenseComponent],
+                declarations: [AdsenseComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=ng2-adsense.js.map
+
+/***/ }),
+
 /***/ "D0XW":
 /*!****************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/scheduler/async.js ***!

@@ -205,6 +205,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Services_guard_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Services/guard.service */ "kIOZ");
 /* harmony import */ var _ads_prueba_prueba_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ads/prueba/prueba.component */ "u0j6");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var ng2_adsense__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ng2-adsense */ "Cvm2");
+
+
 
 
 
@@ -233,6 +236,10 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+            ng2_adsense__WEBPACK_IMPORTED_MODULE_12__["AdsenseModule"].forRoot({
+                adClient: 'ca-pub-2169890752691639',
+                adSlot: 3939566548,
+            })
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
         _login_login_component__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"],
@@ -241,7 +248,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"], ng2_adsense__WEBPACK_IMPORTED_MODULE_12__["AdsenseModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -257,6 +264,10 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
                     _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
                     _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+                    ng2_adsense__WEBPACK_IMPORTED_MODULE_12__["AdsenseModule"].forRoot({
+                        adClient: 'ca-pub-2169890752691639',
+                        adSlot: 3939566548,
+                    })
                 ],
                 providers: [_Services_guard_service__WEBPACK_IMPORTED_MODULE_9__["AuthGuard"],
                     {
@@ -355,6 +366,8 @@ function heckLogin() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PruebaComponent", function() { return PruebaComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var ng2_adsense__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-adsense */ "Cvm2");
+
 
 
 class PruebaComponent {
@@ -370,11 +383,15 @@ class PruebaComponent {
     }
 }
 PruebaComponent.ɵfac = function PruebaComponent_Factory(t) { return new (t || PruebaComponent)(); };
-PruebaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PruebaComponent, selectors: [["app-prueba"]], decls: 2, vars: 0, template: function PruebaComponent_Template(rf, ctx) { if (rf & 1) {
+PruebaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PruebaComponent, selectors: [["app-prueba"]], decls: 3, vars: 2, consts: [[3, "adClient", "pageLevelAds"]], template: function PruebaComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "prueba works!");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fkcy9wcnVlYmEvcHJ1ZWJhLmNvbXBvbmVudC5jc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "ng-adsense", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("adClient", "ca-pub-2169890752691639")("pageLevelAds", true);
+    } }, directives: [ng2_adsense__WEBPACK_IMPORTED_MODULE_1__["AdsenseComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fkcy9wcnVlYmEvcHJ1ZWJhLmNvbXBvbmVudC5jc3MifQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PruebaComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
